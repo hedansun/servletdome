@@ -22,7 +22,7 @@ import org.apache.commons.fileupload.ProgressListener;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-@WebServlet("/servlet/UploadServlet")
+@WebServlet("/upload")
 public class UploadServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,7 +42,7 @@ public class UploadServlet extends HttpServlet {
 		
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 	
-		String path= request.getSession().getServletContext().getRealPath("/")+"upload";
+		String path= request.getSession().getServletContext().getRealPath("/")+"upload/";
 		
 		factory.setRepository(new File(path));
 		

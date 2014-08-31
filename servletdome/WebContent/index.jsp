@@ -10,11 +10,11 @@
 	function progress(){
 		var uploadFile = $("#uploadFile").val();
 		if(uploadFile!=""){
-			uploadForm.action="servlet/UploadServlet";
+			uploadForm.action="upload";
 			uploadForm.submit();
 			settime=setInterval(function(){
 				$.ajax({
-					url:"servlet/UploadServlet",
+					url:"upload",
 					success:function(data){
 						$("#progresstxt").text(data+"%");
 						if(data==100){
@@ -55,6 +55,6 @@
     </form>
     <iframe name="hidden_frame" id="hidden_frame" style="display:none"></iframe> 
     <label id="progresstxt"></label>
-    <a href="servlet/DownloadServlet?fileName=1.txt">下载文件</a>
+    <a href="download?fileName=1.txt">下载文件</a>
 </body>
 </html>

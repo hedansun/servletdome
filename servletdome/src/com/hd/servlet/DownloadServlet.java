@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/servlet/DownloadServlet")
+@WebServlet("/download")
 public class DownloadServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -20,7 +20,8 @@ public class DownloadServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String fileName = request.getParameter("fileName");
-		String savePath = "D:/workspace2/dome/WebContent/upload/";
+		
+		String savePath = request.getSession().getServletContext().getRealPath("/")+"upload/";
 
 		response.setContentType("application/x-download");
 		String filenamedownload = savePath + fileName;
