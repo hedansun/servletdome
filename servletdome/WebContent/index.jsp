@@ -55,6 +55,6 @@
     </form>
     <iframe name="hidden_frame" id="hidden_frame" style="display:none"></iframe> 
     <label id="progresstxt"></label>
-    <a href="download?fileName=1.txt">下载文件</a>
+    <a href="DownloadServlet?fileName=1.txt">下载文件</a>
 </body>
 </html>

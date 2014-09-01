@@ -21,7 +21,7 @@ public class DownloadServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String fileName = request.getParameter("fileName");
 		
-		String savePath = request.getSession().getServletContext().getRealPath("/")+"upload/";
+		String savePath = request.getSession().getServletContext().getRealPath("/")+"upload";
 
 		response.setContentType("application/x-download");
 		String filenamedownload = savePath + fileName;

@@ -42,7 +42,7 @@ public class UploadServlet extends HttpServlet {
 		
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 	
-		String path= request.getSession().getServletContext().getRealPath("/")+"upload/";
+		String path= request.getSession().getServletContext().getRealPath("/")+"upload";
 		
 		factory.setRepository(new File(path));
 		
